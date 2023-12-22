@@ -1,0 +1,83 @@
+{
+	"user": "JonHien",
+	"repo": "gtanetwork",
+	"entry": "NGRP.pwn", 
+	"output": "gamemodes/NGRP.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib",
+		"Open-GTO/protection",
+		"BigETI/pawn-memory",
+		"urShadow/Pawn.RakNet",
+		"pawn-lang/YSI-Includes",
+		"Southclaws/pawn-chrono",
+		"Zeex/samp-plugin-crashdetect",
+		"urShadow/Pawn.CMD",
+		"BigETI/pawn-map",
+		"maddinat0r/samp-log",
+		"maddinat0r/samp-discord-connector",
+		"maddinat0r/sscanf",
+		"Southclaws/progress2",
+		"Southclaws/samp-object-loader",
+		"ScavengeSurvive/settings",
+		"Southclaws/pawn-requests:0.8.6",
+		"samp-incognito/samp-streamer-plugin",
+		"TheManyula/progress3D",
+		"Awsomedude/easyDialog",
+		"Southclaws/samp-whirlpool",
+		"Southclaws/formatex",
+		"Southclaws/samp-plugin-mapandreas",
+		"ScavengeSurvive/chat",
+		"Southclaws/modio",
+		"Southclaws/pawn-fsutil:1.0.3",
+		"ScavengeSurvive/language:2.2.0",
+		"Southclaws/samp-ini",
+		"Southclaws/pawn-errors",
+		"samp-incognito/samp-gvar-plugin",
+		"pBlueG/SA-MP-MySQL",
+		"pawn-lang/YSI-Includes:4.x"
+	],
+	"builds": [
+		{
+			"name": "dev",
+			"version": "3.10.4",
+			"args": [
+				"-;+",
+				"-(+",
+				"-d3",
+				"-Z+"
+			],
+			"includes": [
+				"./non_github_packages/"
+			],
+			"constants": {
+				"BUILD_MINIMAL": ""
+			}
+		},
+		{
+			"name": "live",
+			"version": "3.10.4",
+			"args": [
+				"-;+",
+				"-(+",
+				"-O2",
+				"-Z+"
+			],
+			"includes": [
+				"./non_github_packages/"
+			],
+			"constants": {
+				"BUILD_MINIMAL": ""
+			}
+		}
+	],
+	"runtime": {
+		"version": "0.3.DL",
+		"mode": "server",
+		"echo": "-",
+		"rcon_password": "password",
+		"port": 7777,
+		"hostname": "SA-MP Server",
+		"maxplayers": 50,
+		"language": ""
+	}
+}
